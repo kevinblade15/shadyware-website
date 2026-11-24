@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a0b">
+  <meta name="description" content="Shadyware — software, updates, and community.">
+  <title>Shadyware — Built Different</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Shadyware home">
+      <span class="brand-mark">S</span><span>SHADY<span class="brand-muted">WARE</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="nav" id="nav">
+      <a href="#scripts">Scripts</a>
+      <a href="#changelogs">Changelogs</a>
+      <a href="#faq">FAQ</a>
+      <a href="#discord">Community</a>
+      <a class="nav-cta" href="https://discord.gg/GSevFng2Ap" target="_blank" rel="noreferrer">Join Discord <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero wrap">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><i></i> THE OFFICIAL SHADYWARE WEBSITE</div>
+        <h1>BUILT<br><span class="metal">DIFFERENT.</span></h1>
+        <p class="hero-sub">A cleaner place to explore Shadyware products, follow updates, and stay connected with the community.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="#scripts">Explore products <span>↘</span></a>
+          <a class="button button-ghost" href="https://discord.gg/GSevFng2Ap" target="_blank" rel="noreferrer">Join the Discord <span>↗</span></a>
+        </div>
+        <div class="hero-foot"><span class="pulse"></span> PRODUCT INFORMATION &amp; COMMUNITY UPDATES</div>
+      </div>
+      <div class="hero-art reveal" aria-label="Abstract metallic Shadyware artwork">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-emblem"><span>S</span></div>
+        <div class="art-label label-top">SHADYWARE <b>®</b></div>
+        <div class="art-label label-bottom">SOFTWARE / COMMUNITY</div>
+        <div class="art-glint"></div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Shadyware"><div>SHADYWARE <b>✳</b> PRODUCT UPDATES <b>✳</b> COMMUNITY FIRST <b>✳</b> SHADYWARE <b>✳</b> PRODUCT UPDATES <b>✳</b> COMMUNITY FIRST <b>✳</b></div></section>
+
+    <section class="section wrap" id="scripts">
+      <div class="section-head reveal"><div><div class="eyebrow">01 / PRODUCTS</div><h2>Find your <span class="metal">next tool.</span></h2></div><p>Explore the Shadyware lineup. Open a product to view its details and official links.</p></div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="section changelog-section" id="changelogs">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="eyebrow">02 / DEVELOPMENT</div><h2>What's <span class="metal">changing.</span></h2></div><p>Follow releases, improvements, and announcements in one place.</p></div>
+        <div class="timeline" id="changelogList"></div>
+      </div>
+    </section>
+
+    <section class="section wrap faq-section" id="faq">
+      <div class="section-head reveal"><div><div class="eyebrow">03 / SUPPORT</div><h2>Questions?<br><span class="metal">We've got answers.</span></h2></div><p>Quick answers to common questions. Need more help? Join our Discord and open a support ticket.</p></div>
+      <div class="faq-list" id="faqList"></div>
+    </section>
+
+    <section class="community wrap" id="discord">
+      <div class="community-inner reveal">
+        <div class="community-orb"><span>✳</span></div>
+        <div class="community-copy"><div class="eyebrow">04 / COMMUNITY</div><h2>Stay in the <span class="metal">loop.</span></h2><p>Join the official Shadyware Discord for announcements, product news, support, and community updates.</p><a class="button button-light" href="https://discord.gg/GSevFng2Ap" target="_blank" rel="noreferrer">Join our Discord <span>↗</span></a></div>
+        <div class="community-side"><span class="side-dot"></span> OFFICIAL SERVER<br><strong>discord.gg/GSevFng2Ap</strong></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <a class="brand" href="#home"><span class="brand-mark">S</span><span>SHADY<span class="brand-muted">WARE</span></span></a>
+    <span>© <span id="year"></span> Shadyware. All rights reserved.</span>
+    <a href="https://discord.gg/GSevFng2Ap" target="_blank" rel="noreferrer">Discord ↗</a>
+  </footer>
+
+  <div class="modal-backdrop" id="productModal" aria-hidden="true">
+    <article class="product-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <div class="eyebrow" id="modalCategory">SHADYWARE PRODUCT</div>
+      <h2 id="modalTitle">Product name</h2>
+      <p id="modalDescription"></p>
+      <div class="modal-meta"><span>STATUS</span><strong id="modalStatus">Information coming soon</strong></div>
+      <div class="modal-actions"><a class="button button-light" id="modalAction" href="https://discord.gg/GSevFng2Ap" target="_blank" rel="noreferrer">Ask in Discord ↗</a><button class="button button-ghost" id="modalBack">Back to products</button></div>
+      <p class="modal-note">Product details and availability are maintained by the Shadyware team. Check the official Discord for current information.</p>
+    </article>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
